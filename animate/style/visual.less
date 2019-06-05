@@ -1,0 +1,35 @@
+p {
+    font-size: 20px;
+    font-weight: bold;
+    em {
+        background: yellow;
+        padding: 5px;
+        
+    }
+}
+.circleOut {
+    fill: none;
+    stroke-opacity: 1;
+    stroke: #000000; 
+    transform-origin: 50% 50%;
+}
+.circleCard:hover .circleOut{
+  animation-duration: 2s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+  
+  @keyframes pulse {
+    0% {
+      stroke-opacity: 1;
+      stroke-width: 1px;
+      transform: scale(1);
+    }
+    100% {
+      stroke-opacity: 0;
+      stroke-width: 1.5em;
+      transform: scale(1);
+    }
+  }
